@@ -1,0 +1,170 @@
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+}
+
+.stat-box {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 220px;
+  padding: 20px 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.stat-box:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stat-box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stat-box:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stat-box:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stat-box img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.stat-box h2 {
+  font-size: 1.8rem;
+  margin: 10px 0 5px;
+  color: #333;
+  font-weight: 700;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.6s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.stat-box p {
+  font-size: 0.95rem;
+  color: #555;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+
+.stat-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.stat-box img {
+  animation: fadeUp 0.8s ease forwards, float 3s ease-in-out infinite;
+}
+
+
+@media (max-width: 768px) {
+  .stat-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-box {
+    width: 90%;
+  }
+}
+
+.hero-text {
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text h4 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h4 {
+    font-size: 1rem;
+  }
+}
